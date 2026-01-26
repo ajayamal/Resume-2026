@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+}
+
+@media print {
+  @page {
+    margin: 0;
+    size: A4;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* Force white background for the page container */
+  .page {
+    background-color: white !important;
+    color: black !important;
+    width: 210mm;
+    height: 297mm;
+  }
+
+  /* Handle the inverted header - make it look good on white paper */
+  .header {
+    background-color: #f8f9fa !important;
+    /* Very light grey for some definition */
+    border-bottom: 2px solid #000 !important;
+    color: black !important;
+  }
+
+  /* Ensure icons and badges remain visible */
+  .bg-white {
+    background-color: #eee !important;
+    /* Slight grey background for the 'white' icons */
+    border: 1px solid #777 !important;
+  }
+
+  .text-white {
+    color: black !important;
+  }
+
+  .text-zinc-300,
+  .text-zinc-400 {
+    color: #444 !important;
+  }
+
+  /* Projects and Skills tags */
+  .bg-zinc-800,
+  .bg-zinc-900 {
+    background-color: #f1f1f1 !important;
+    border: 1px solid #ddd !important;
+    color: #333 !important;
+  }
+}
