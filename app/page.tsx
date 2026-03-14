@@ -1,18 +1,41 @@
+"use client";
+
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { useRef } from "react";
 import { Header } from "@/components/Header";
 import { Profile } from "@/components/Profile";
 import { SkillSection } from "@/components/SkillSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { EducationSection } from "@/components/EducationSection";
 import { PersonalProjects } from "@/components/PersonalProjects";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+
 config.autoAddCss = false;
 
 export default function Home() {
+  const resumeRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPDF = () => {
+    window.print();
+  };
+
   return (
-    <main className="font-outfit hyphens-manual">
+    <main className="font-outfit hyphens-manual bg-zinc-900 min-h-screen py-8">
+      <div className="max-w-2xl md:max-w-letter mx-auto mb-6 flex justify-end px-4 no-print">
+        <button
+          onClick={handleDownloadPDF}
+          className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-md font-semibold hover:bg-zinc-200 transition-colors shadow-lg"
+        >
+          <FontAwesomeIcon icon={faDownload} />
+          Download PDF
+        </button>
+      </div>
+
       {/* // <!-- Page --> */}
       <div
+        ref={resumeRef}
         className="
           mx-auto
           page

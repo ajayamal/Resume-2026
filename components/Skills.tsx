@@ -12,12 +12,10 @@ export const Skills = ({ title, skills }: SkillsProps) => (
         {title}
       </h3>
     </header>
-    <div className="my-2.5 last:pb-1.5">
-      <div className="flex flex-wrap text-md leading-relaxed gap-1">
-        {skills?.map((skill, key) => (
-          <Badge content={skill} key={key} />
-        ))}
-      </div>
-    </div>
+    <ul className="my-2.5 last:pb-1.5 flex flex-wrap text-md leading-relaxed gap-1 p-0 list-none">
+      {skills?.map((skill, key) => (
+        <Badge content={skill} key={key} />
+      ))}
+    </ul>
   </section>
 );

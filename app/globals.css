@@ -10,53 +10,143 @@ body {
 @media print {
   @page {
     margin: 0;
-    size: A4;
+    size: A3;
+  }
+
+  /* Force background colors to be printed */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 
   body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    background-color: white !important;
-    color: black !important;
+    background-color: #09090b !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto !important;
   }
 
-  /* Force white background for the page container */
+  /* Ensure the page container preserves its dark background */
   .page {
-    background-color: white !important;
-    color: black !important;
-    width: 210mm;
-    height: 297mm;
+    background-color: #09090b !important;
+    color: #d4d4d8 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    position: relative;
+
+    /* Maintain actual scale 1 as requested */
+    transform: scale(1);
+    transform-origin: top center;
   }
 
-  /* Handle the inverted header - make it look good on white paper */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Compact grid layout for print */
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+    /* Reduced from 2rem */
+    break-inside: auto !important;
+  }
+
+  .col-span-3 {
+    grid-column: span 3 / span 3 !important;
+  }
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1 !important;
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2 !important;
+  }
+
+  /* Reduce vertical spacing between sections */
+  section {
+    margin-top: 0.5rem !important;
+    /* Reduced from 1rem */
+    break-inside: auto !important;
+  }
+
   .header {
-    background-color: #f8f9fa !important;
-    /* Very light grey for some definition */
-    border-bottom: 2px solid #000 !important;
-    color: black !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 1rem !important;
+    /* Reduced from 1.5rem */
+    margin-bottom: 0.5rem !important;
+    /* Reduced from 1rem */
+    display: flex !important;
+    flex-direction: row !important;
+    border-radius: 0 !important;
   }
 
-  /* Ensure icons and badges remain visible */
-  .bg-white {
-    background-color: #eee !important;
-    /* Slight grey background for the 'white' icons */
-    border: 1px solid #777 !important;
+  /* Tighter spacing for list items */
+  li {
+    margin-bottom: 0.2rem !important;
+    /* Reduced from 0.4rem */
   }
 
-  .text-white {
-    color: black !important;
+  /* Re-specify key backgrounds explicitly for print engine */
+  .bg-zinc-800 {
+    background-color: #27272a !important;
   }
 
-  .text-zinc-300,
-  .text-zinc-400 {
-    color: #444 !important;
-  }
-
-  /* Projects and Skills tags */
-  .bg-zinc-800,
   .bg-zinc-900 {
-    background-color: #f1f1f1 !important;
-    border: 1px solid #ddd !important;
-    color: #333 !important;
+    background-color: #18181b !important;
   }
+
+  .bg-zinc-950 {
+    background-color: #09090b !important;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+}
+
+/* Styles specifically for print capture / fallback */
+.pdf-exporting {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-color: #09090b !important;
+  width: 1060px !important;
+  max-width: none !important;
+}
+
+.pdf-exporting .grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 2.5rem !important;
+}
+
+.pdf-exporting section.col-span-3.md\:col-span-1 {
+  grid-column: span 1 / span 1 !important;
+}
+
+.pdf-exporting section.col-span-3.md\:col-span-2 {
+  grid-column: span 2 / span 2 !important;
+}
+
+.pdf-exporting .header {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 0 !important;
+}
+
+.pdf-exporting * {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }

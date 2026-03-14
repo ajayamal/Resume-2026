@@ -7,13 +7,15 @@ export const SkillSection = () => (
 
     {/* Programming Languages */}
     <Skills
-      title="Programming Languages"
+      title="Programming Languages and Databases"
       skills={[
         "JavaScript (Advanced)",
         "TypeScript",
         "Dart",
-        "Java",
+        "Java (Intermediate)",
         "SQL (Intermediate)",
+        "MongoDB",
+        "PostgreSQL",
       ]}
     />
 

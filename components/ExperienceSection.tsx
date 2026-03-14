@@ -13,33 +13,33 @@ const Project = ({
 }) => (
   <div className="flex gap-2 pt-2 items-center mb-4">
     <div className="text-white font-medium">{title}:</div>
-    <div className="flex flex-wrap gap-1">
+    <ul className="flex flex-wrap gap-1">
       {projects?.map((project, key) => (
-        <div
+        <li
           key={key}
-          className="px-3 text-xs font-semibold py-1 rounded-full bg-zinc-800 text-zinc-400"
+          className="px-3 text-xs font-semibold py-1 rounded-full bg-zinc-800 text-zinc-400 list-none"
         >
           {project}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   </div>
 );
 
 export const List = ({ children }: { children: ReactNode }) => (
-  <div className="flex gap-2">
-    <div className="flex mt-1">
+  <li className="flex gap-2 mb-1">
+    <div className="flex mt-1 flex-shrink-0">
       <FontAwesomeIcon icon={faAngleRight} />
     </div>
     <div className="text-wrap text-justify">{children}</div>
-  </div>
+  </li>
 );
 
 export const ExperienceSection = () => (
   <section className="col-span-3" id="experience">
     <Heading title="Experience" />
 
-    <div className="relative border-s border-gray-200 ml-4">
+    <ul className="relative border-s border-gray-200 ml-4 p-0 list-none">
       <Experience
         companyName="Frontend Developer @ TCS - (Full-Time)"
         isPresent
@@ -52,21 +52,23 @@ export const ExperienceSection = () => (
             <div className="font-semibold text-purple-900 mb-1">
               <Project title="Key Clients" projects={["Qualcomm - (Present)", "Amazon"]} />
             </div>
-            <List>
-              Core contributor to the Qualcomm WWW team, developing and maintaining qualcomm.com using React for the frontend and Adobe Experience Manager (AEM) as the backend CMS.
-            </List>
-            <List>
-              Built reusable, modular React components aligned with AEM authoring workflows, collaborating closely with designers, backend engineers, and content teams.
-            </List>
-            <List>
-              Worked on performance optimization, cross-browser compatibility, accessibility, and SEO best practices for a high-traffic enterprise website.
-            </List>
-            <List>
-              Supported Amazon CodeWhisperer as part of the data analytics team, creating and validating code samples for predefined prompts used in AI-assisted code generation.
-            </List>
-            <List>
-              Optimized code performance and efficiency to ensure correctness and quality standards.
-            </List>
+            <ul className="list-none p-0 m-0">
+              <List>
+                Core contributor to the Qualcomm WWW team, developing and maintaining qualcomm.com using React for the frontend and Adobe Experience Manager (AEM) as the backend CMS.
+              </List>
+              <List>
+                Built reusable, modular React components aligned with AEM authoring workflows, collaborating closely with designers, backend engineers, and content teams.
+              </List>
+              <List>
+                Worked on performance optimization, cross-browser compatibility, accessibility, and SEO best practices for a high-traffic enterprise website.
+              </List>
+              <List>
+                Supported Amazon CodeWhisperer as part of the data analytics team, creating and validating code samples for predefined prompts used in AI-assisted code generation.
+              </List>
+              <List>
+                Optimized code performance and efficiency to ensure correctness and quality standards.
+              </List>
+            </ul>
           </div>
         </div>
       </Experience>
@@ -84,18 +86,20 @@ export const ExperienceSection = () => (
                 projects={["Valores NFT marketplace", "8Mint"]}
               />
             </div>
-            <List>
-              Worked as a Full Stack Developer on Valores and 8Mint, building full-stack features using Next.js (frontend) and NestJS (backend), with PostgreSQL for data persistence.
-            </List>
-            <List>
-              Contributed to 8Mint, a Web3 NFT platform offering creators no-code tools for creating and managing NFTs — including features like allowlist and raffle workflows and branded minting pages.
-            </List>
-            <List>
-              Designed and implemented REST APIs and backend logic using NestJS, handling user flows, permissions, database interactions, and integration points with Web3 interfaces.
-            </List>
-            <List>
-              Built responsive, interactive Next.js frontend features, translating high-level UX flows into reusable components and optimizing for performance and modularity.
-            </List>
+            <ul className="list-none p-0 m-0">
+              <List>
+                Worked as a Full Stack Developer on Valores and 8Mint, building full-stack features using Next.js (frontend) and NestJS (backend), with PostgreSQL for data persistence.
+              </List>
+              <List>
+                Contributed to 8Mint, a Web3 NFT platform offering creators no-code tools for creating and managing NFTs — including features like allowlist and raffle workflows and branded minting pages.
+              </List>
+              <List>
+                Designed and implemented REST APIs and backend logic using NestJS, handling user flows, permissions, database interactions, and integration points with Web3 interfaces.
+              </List>
+              <List>
+                Built responsive, interactive Next.js frontend features, translating high-level UX flows into reusable components and optimizing for performance and modularity.
+              </List>
+            </ul>
           </div>
         </div>
       </Experience>
@@ -107,7 +111,7 @@ export const ExperienceSection = () => (
         <div className="font-semibold text-purple-900 mb-1">
           <Project title="Projects" projects={["JustAct", "Pixlmeet"]} />
         </div>
-        <div className="flex flex-col gap-1 text-[13px] font-medium">
+        <ul className="flex flex-col gap-1 text-[13px] font-medium list-none p-0 m-0">
           <List>
             Built and maintained backend services using Ruby on Rails, Node.js, AdonisJS, and ExpressJS, working across multiple runtime environments.
           </List>
@@ -120,14 +124,14 @@ export const ExperienceSection = () => (
           <List>
             Established a solid foundation in server-side development, later enabling a transition into full-stack and frontend roles.
           </List>
-        </div>
+        </ul>
       </Experience>
       <Experience
         companyName="Junior Full Stack Developer @ Altius Technologies - (Full-Time)"
         duration="Jun 2019 - Dec 2019"
         location="Coimbatore, Tamil Nadu, India"
       >
-        <div className="flex flex-col gap-1 text-[13px] font-medium">
+        <ul className="flex flex-col gap-1 text-[13px] font-medium list-none p-0 m-0">
           <List>
             Progressed from Intern to Full-Time Developer, contributing to multiple client-facing applications.
           </List>
@@ -140,8 +144,8 @@ export const ExperienceSection = () => (
           <List>
             Gained hands-on experience with end-to-end project execution in a collaborative engineering environment.
           </List>
-        </div>
+        </ul>
       </Experience>
-    </div>
+    </ul>
   </section>
 );

@@ -12,16 +12,16 @@ const Project = ({
 }) => (
   <div className="flex gap-2 pt-2 items-center">
     <div className="text-white font-medium">{title}:</div>
-    <div className="flex flex-wrap gap-1">
+    <ul className="flex flex-wrap gap-1 p-0 m-0 list-none">
       {projects?.map((project, key) => (
-        <div
+        <li
           key={key}
-          className="px-3 text-xs font-semibold py-1 rounded-full bg-zinc-800 text-zinc-400"
+          className="px-3 text-xs font-semibold py-1 rounded-full bg-zinc-800 text-zinc-400 list-none"
         >
           {project}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   </div>
 );
 
@@ -30,7 +30,7 @@ export const PersonalProjects = () => (
     <Heading title="Projects" />
 
     {/* <!-- Education 1 --> */}
-    <div className="relative border-s border-gray-200 ml-4">
+    <ul className="relative border-s border-gray-200 ml-4 p-0 list-none">
       <Experience
         icon={faRocket}
         companyName="PowerKick"
@@ -50,7 +50,7 @@ export const PersonalProjects = () => (
           Arto is a digital art discovery platform that connects artists, galleries, and collectors, enabling users to explore artworks, book viewings, and purchase art.
         </div>
       </Experience>
-    </div>
+    </ul>
     {/* <!-- End Education 1 --> */}
   </section>
 );

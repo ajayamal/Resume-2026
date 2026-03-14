@@ -20,7 +20,7 @@ export const Experience = ({
   icon,
 }: ExperienceProps) => {
   return (
-    <div className="mb-8 ms-8">
+    <li className="mb-8 ms-8 list-none">
       <span className="absolute flex items-center justify-center w-8 h-8 bg-white rounded-full -start-4 ring-8 ring-zinc-950 ">
         <FontAwesomeIcon
           icon={icon ?? faSuitcase}
@@ -46,6 +46,6 @@ export const Experience = ({
         </div>
       )}
       <div className="text-sm">{children}</div>
-    </div>
+    </li>
   );
 };

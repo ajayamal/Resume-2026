@@ -26,7 +26,7 @@ export const Header = () => (
     </div>
     <div className="flex flex-col gap-3 items-start md:items-end flex-1 text-black text-sm">
       <a
-        href="mailto:official.ajith171995@gmail.com"
+        href="mailto:ajayamalprof@gmail.com"
         className="flex items-center gap-2"
       >
         <FontAwesomeIcon icon={faEnvelope} />
