@@ -106,7 +106,7 @@ export const ExperienceSection = () => (
       <Experience
         companyName="Backend Developer @ F22 Labs"
         duration="Jan 2020 - Jul 2020"
-        location="Chennai Area, India"
+        location="Chennai, Tamil Nadu, India"
       >
         <div className="font-semibold text-purple-900 mb-1">
           <Project title="Projects" projects={["JustAct", "Pixlmeet"]} />

@@ -9,13 +9,13 @@ export const SkillSection = () => (
     <Skills
       title="Programming Languages and Databases"
       skills={[
-        "JavaScript (Advanced)",
+        "JavaScript",
         "TypeScript",
         "Dart",
+        "PostgreSQL",
+        "MongoDB",
         "Java (Intermediate)",
         "SQL (Intermediate)",
-        "MongoDB",
-        "PostgreSQL",
       ]}
     />
 
@@ -64,7 +64,6 @@ export const SkillSection = () => (
         "Firebase",
         "Google Analytics",
         "Contentful CMS",
-        "Netlify CMS",
         "Netlify",
         "Vercel",
       ]}

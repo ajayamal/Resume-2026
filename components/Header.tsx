@@ -10,18 +10,17 @@ export const Header = () => (
         <h1 className="lg:text-3xl md:text-xl mr-auto text-xl uppercase font-semibold text-black">
           Ajay Amala Chandran A
         </h1>
-        <div className="text-lg">Software Engineer</div>
+        <div className="text-lg">Software Developer</div>
         <div className="text-sm">
-          React.js | Next.js | Node.js | NestJS | PostgreSQL | TypeScript | Web
-          Development
+          React.js | Next.js | Node.js | NestJS | PostgreSQL | TypeScript
         </div>
-        {/* <Link
+        <Link
           className="text-sm underline text-black"
-          href={"https://ak-ajith-portfolio.vercel.app/"}
+          href={"https://ajayamal-portfolio.vercel.app/"}
           target="_blank"
         >
-          https://ak-ajith-portfolio.vercel.app/
-        </Link> */}
+          https://ajayamal-portfolio.vercel.app/
+        </Link>
       </div>
     </div>
     <div className="flex flex-col gap-3 items-start md:items-end flex-1 text-black text-sm">
@@ -30,7 +29,7 @@ export const Header = () => (
         className="flex items-center gap-2"
       >
         <FontAwesomeIcon icon={faEnvelope} />
-        <span>ajayamalachandran@gmail.com</span>
+        <span>ajayamalprof@gmail.com</span>
       </a>
       <a
         href="https://www.linkedin.com/in/ajay-amal-95554912a/"
