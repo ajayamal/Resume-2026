@@ -34,7 +34,9 @@ export const SkillSection = () => (
         "React Query",
         "Express",
         "Java Spring MVC",
-        "Flutter"
+        "Flutter",
+        "GraphQL",
+        "REST APIs"
       ]}
     />
 

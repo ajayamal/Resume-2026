@@ -12,7 +12,7 @@ export const Header = () => (
         </h1>
         <div className="text-lg">Software Developer</div>
         <div className="text-sm">
-          React.js | Next.js | Node.js | NestJS | PostgreSQL | TypeScript
+          React.js | Next.js | Node.js | NestJS | GraphQL | PostgreSQL | TypeScript | MongoDB
         </div>
         <Link
           className="text-sm underline text-black"
