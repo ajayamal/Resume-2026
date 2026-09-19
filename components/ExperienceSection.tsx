@@ -41,7 +41,7 @@ export const ExperienceSection = () => (
 
     <ul className="relative border-s border-gray-200 ml-4 p-0 list-none">
       <Experience
-        companyName="Frontend Developer @ TCS - (Full-Time)"
+        companyName="Systems Engineer @ TCS - (Full-Time)"
         isPresent
         duration="May 2023 - Present"
         location="Bengaluru, Karnataka, India"
